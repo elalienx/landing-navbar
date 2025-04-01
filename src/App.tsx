@@ -6,6 +6,8 @@ import PrimaryLink from "./components/primary-link/PrimaryLink";
 import "./styles/style.css";
 
 export default function App() {
+  // Local state
+  const [active, setActive] = useState(1);
   const [showIcons, setShowIcons] = useState(true);
 
   return (
@@ -13,9 +15,24 @@ export default function App() {
       <h1>Navigation Bar</h1>
 
       <nav className="nav">
-        <PrimaryLink text={"Privatlån"} showIcon={showIcons} />
-        <PrimaryLink text={"Företagslån"} showIcon={showIcons} />
-        <PrimaryLink text={"Bolån"} showIcon={showIcons} />
+        <PrimaryLink
+          id={1}
+          text={"Privatlån"}
+          showIcon={showIcons}
+          state={[active, setActive]}
+        />
+        <PrimaryLink
+          id={2}
+          text={"Företagslån"}
+          showIcon={showIcons}
+          state={[active, setActive]}
+        />
+        <PrimaryLink
+          id={3}
+          text={"Bolån"}
+          showIcon={showIcons}
+          state={[active, setActive]}
+        />
       </nav>
 
       <label>

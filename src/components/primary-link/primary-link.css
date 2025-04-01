@@ -1,4 +1,7 @@
 .primary-link {
+  --gap: 4px;
+  --icon-size: 16px;
+
   padding: 8px;
   background-color: white;
   color: green;
@@ -6,28 +9,40 @@
   border: solid 4px yellowgreen;
 
   .icon {
-    display: inline-block;
-    margin-right: 4px;
+    display: inline-block; /** to be both inline with the text and have width + height */
+    width: var(--icon-size);
+    height: var(--icon-size);
+    margin-right: var(--gap);
     background-color: yellowgreen;
-    width: 16px;
-    height: 16px;
-    overflow: hidden;
   }
 
   &:hover {
     font-weight: bold;
   }
-}
 
-.primary-link::before {
-  content: attr(title);
-  font-weight: bold;
+  &.active {
+    background-color: green;
+    border-color: white;
+    color: white;
 
-  /** To debug */
-  color: red;
+    .icon {
+      background-color: white;
+    }
+  }
 
-  /** To hide pseudo element */
-  height: 0;
-  visibility: hidden;
-  display: block;
+  &::before {
+    content: attr(title);
+
+    /** To offset elements */
+    font-weight: bold; /** hover + active font */
+    margin-right: calc(var(--icon-size) + var(--gap)); /** icon */
+
+    /** To debug */
+    color: red;
+
+    /** To hide pseudo element */
+    height: 0;
+    visibility: hidden;
+    display: block;
+  }
 }
