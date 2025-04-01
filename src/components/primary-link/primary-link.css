@@ -5,6 +5,15 @@
   text-decoration: none;
   border: solid 4px yellowgreen;
 
+  .icon {
+    display: inline-block;
+    margin-right: 4px;
+    background-color: yellowgreen;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+  }
+
   &:hover {
     font-weight: bold;
   }
@@ -12,13 +21,13 @@
 
 .primary-link::before {
   content: attr(title);
-  height: 0;
   font-weight: bold;
 
   /** To debug */
   color: red;
 
   /** To hide pseudo element */
+  height: 0;
   visibility: hidden;
   display: block;
 }

@@ -6,7 +6,7 @@ import PrimaryLink from "./components/primary-link/PrimaryLink";
 import "./styles/style.css";
 
 export default function App() {
-  const [showIcons, setShowIcons] = useState(false);
+  const [showIcons, setShowIcons] = useState(true);
 
   return (
     <div className="app">
