@@ -11,7 +11,7 @@ interface props {
 
 export default function PrimaryLink({ text, showIcon }: props) {
   return (
-    <a href="#" className="primary-link">
+    <a href="#" className="primary-link" title={text}>
       {showIcon && <span className="icon">ℹ️</span>}
       {text}
     </a>

@@ -6,6 +6,19 @@
   border: solid 4px yellowgreen;
 
   &:hover {
-    font-weight: 700;
+    font-weight: bold;
   }
+}
+
+.primary-link::before {
+  content: attr(title);
+  height: 0;
+  font-weight: bold;
+
+  /** To debug */
+  color: red;
+
+  /** To hide pseudo element */
+  visibility: hidden;
+  display: block;
 }
