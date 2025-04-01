@@ -6,9 +6,6 @@
   border: solid 4px yellowgreen;
 
   &:hover {
-    border-color: white;
-    background-color: green;
-    color: white;
     font-weight: 700;
   }
 }
