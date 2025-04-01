@@ -1,12 +1,14 @@
 .primary-link {
   --gap: 4px;
   --icon-size: 16px;
+  --font-weight: 700;
 
-  padding: 8px;
+  padding: 8px 16px;
   background-color: white;
   color: green;
   text-decoration: none;
   border: solid 4px yellowgreen;
+  border-radius: 100px;
 
   .icon {
     display: inline-block; /** to be both inline with the text and have width + height */
@@ -17,13 +19,14 @@
   }
 
   &:hover {
-    font-weight: bold;
+    background-color: lightgoldenrodyellow;
   }
 
   &.active {
     background-color: green;
     border-color: white;
     color: white;
+    font-weight: var(--font-weight);
 
     .icon {
       background-color: white;
@@ -34,7 +37,7 @@
     content: attr(title);
 
     /** To offset elements */
-    font-weight: bold; /** hover + active font */
+    font-weight: var(--font-weight); /** active font */
     margin-right: calc(var(--icon-size) + var(--gap)); /** icon */
 
     /** To debug */
