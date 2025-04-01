@@ -3,9 +3,10 @@ import { useState } from "react";
 
 // Project files
 import PrimaryLink from "./components/primary-link/PrimaryLink";
+import "./styles/style.css";
 
 export default function App() {
-  const [showIcons, setShowIcons] = useState(true);
+  const [showIcons, setShowIcons] = useState(false);
 
   return (
     <div className="app">
@@ -18,7 +19,11 @@ export default function App() {
       </nav>
 
       <label>
-        <input type="checkbox" onChange={() => setShowIcons(!showIcons)} />
+        <input
+          type="checkbox"
+          checked={showIcons}
+          onChange={() => setShowIcons(!showIcons)}
+        />
         Toogle icon visibility
       </label>
     </div>

@@ -1,0 +1,14 @@
+.primary-link {
+  padding: 8px;
+  background-color: white;
+  color: green;
+  text-decoration: none;
+  border: solid 4px yellowgreen;
+
+  &:hover {
+    border-color: white;
+    background-color: green;
+    color: white;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,19 @@
+/* Reset */
+h1 {
+  margin: 0;
+}
+
+/* App code */
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-family: "Circular Pro", Helvetica, Arial, sans-serif;
+
+  .nav {
+    display: flex;
+    gap: 8px;
+    padding: 16px;
+    background-color: green;
+  }
+}

@@ -1,3 +1,6 @@
+// Project files
+import "./primary-link.css";
+
 interface props {
   /** What to show on the screen */
   text: string;
@@ -8,7 +11,7 @@ interface props {
 
 export default function PrimaryLink({ text, showIcon }: props) {
   return (
-    <a href="#">
+    <a href="#" className="primary-link">
       {showIcon && <span className="icon">ℹ️</span>}
       {text}
     </a>
